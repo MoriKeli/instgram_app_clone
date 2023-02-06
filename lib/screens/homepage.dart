@@ -9,23 +9,23 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   List<String> profileImages = [
-    "assets/dps/boy-1.jpg",
-    "assets/dps/boy-2.jpg",
-    "assets/dps/boy-3.jpg",
-    "assets/dps/boy-4.jpg",
-    "assets/dps/girl-1.jpg",
-    "assets/dps/girl-2.jpg",
-    "assets/dps/girl-3.jpg",
+    "images/dps/boy-1.jpg",
+    "images/dps/boy-2.jpg",
+    "images/dps/boy-3.jpg",
+    "images/dps/boy-4.jpg",
+    "images/dps/girl-1.jpg",
+    "images/dps/girl-2.jpg",
+    "images/dps/girl-3.jpg",
   ];
 
   List<String> user_posts = [
-    "assets/1.jpg",
-    // "assets/2.jpg",
-    // "assets/3.jpg",
-    // "assets/5.jpg",
-    // "assets/6.jpg",
-    // "assets/13.jpg",
-    // "assets/gallery-8.jpg",
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/5.jpg",
+    "images/6.jpg",
+    "images/13.jpg",
+    "images/gallery-8.jpg",
   ];
 
   @override
@@ -35,7 +35,7 @@ class _HomepageState extends State<Homepage> {
         // elevation: 10.0,
         // leading: Icon(Icons.camera_alt_outlined, color: Colors.black, size: 30.0),
         title: Image(
-          image: AssetImage("assets/logo.png"),
+          image: AssetImage("images/logo.png"),
           height: 38.0,
           // fit: BoxFit.contain,
         ),
@@ -67,7 +67,7 @@ class _HomepageState extends State<Homepage> {
                               CircleAvatar(
                                 radius: 37.0,
                                 backgroundImage:
-                                    AssetImage("assets/gradient.jpg"),
+                                    AssetImage("images/gradient.jpg"),
                                 child: CircleAvatar(
                                   radius: 34.0,
                                   backgroundImage:
@@ -82,10 +82,11 @@ class _HomepageState extends State<Homepage> {
                         )),
               ),
             ),
+
             Divider(thickness: 0.5, color: Colors.black),
             Column(
               children: List.generate(
-                1,
+                2,
                 (index) => Column(
                   children: [
                     //  Header
@@ -95,7 +96,7 @@ class _HomepageState extends State<Homepage> {
                           padding: EdgeInsets.all(10.0),
                           child: CircleAvatar(
                             radius: 25.0,
-                            backgroundImage: AssetImage("assets/gradient.jpg"),
+                            backgroundImage: AssetImage("images/gradient.jpg"),
                             child: CircleAvatar(
                               radius: 23.0,
                               backgroundImage: AssetImage(profileImages[index]),
@@ -105,13 +106,31 @@ class _HomepageState extends State<Homepage> {
                         Text("Profile name"),
                         Spacer(),
                         IconButton(
-                            icon: Icon(Icons.more_vert),
-                            onPressed: () {}),
+                            icon: Icon(Icons.more_vert), onPressed: () {}),
                       ],
                     ),
-                  //  images uploaded by the user
-                    Image.asset(user_posts[index]),
-                    // Image(image: AssetImage(user_posts[index]),),
+                    //  images uploaded by the user
+                    Image(image: AssetImage(user_posts[index])),
+                    //  Footer for each posts card
+                    Row(
+                      children: [
+                        IconButton(
+                            icon: Icon(Icons.favorite_border),
+                            onPressed: () {}
+                        ),
+                        IconButton(
+                            icon: Icon(Icons.chat_bubble_outline_outlined),
+                            onPressed: () {}
+                        ),IconButton(
+                            icon: Icon(Icons.send),
+                            onPressed: () {}
+                        ),
+                        IconButton(
+                            icon: Icon(Icons.bookmark_border),
+                            onPressed: () {}
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
@@ -119,7 +138,6 @@ class _HomepageState extends State<Homepage> {
           ],
         ),
       ),
-
       bottomNavigationBar: BottomAppBar(
         elevation: 100.0,
         child: Row(
