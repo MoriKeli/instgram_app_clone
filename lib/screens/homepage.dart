@@ -125,6 +125,7 @@ class _HomepageState extends State<Homepage> {
                             icon: Icon(Icons.send),
                             onPressed: () {}
                         ),
+                        Spacer(),
                         IconButton(
                             icon: Icon(Icons.bookmark_border),
                             onPressed: () {}
