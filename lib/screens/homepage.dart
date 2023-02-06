@@ -86,7 +86,7 @@ class _HomepageState extends State<Homepage> {
             Divider(thickness: 0.5, color: Colors.black),
             Column(
               children: List.generate(
-                2,
+                7,
                 (index) => Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -144,7 +144,7 @@ class _HomepageState extends State<Homepage> {
                                       ),
                                   ),
                                   TextSpan(text: "and "),
-                                  TextSpan(text: "others", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  TextSpan(text: "4057 others", style: TextStyle(fontWeight: FontWeight.bold)),
 
                                 ]),
                           )
