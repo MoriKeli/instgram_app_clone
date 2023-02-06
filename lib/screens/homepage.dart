@@ -88,6 +88,7 @@ class _HomepageState extends State<Homepage> {
               children: List.generate(
                 2,
                 (index) => Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     //  Header
                     Row(
@@ -115,22 +116,40 @@ class _HomepageState extends State<Homepage> {
                     Row(
                       children: [
                         IconButton(
-                            icon: Icon(Icons.favorite_border),
-                            onPressed: () {}
-                        ),
+                            icon: Icon(Icons.favorite_border, size: 32.0),
+                            onPressed: () {}),
                         IconButton(
-                            icon: Icon(Icons.chat_bubble_outline_outlined),
-                            onPressed: () {}
-                        ),IconButton(
-                            icon: Icon(Icons.send),
-                            onPressed: () {}
-                        ),
+                            icon: Icon(Icons.chat_bubble_outline_outlined, size: 32.0),
+                            onPressed: () {}),
+                        IconButton(icon: Icon(Icons.send, size: 32.0), onPressed: () {}),
                         Spacer(),
                         IconButton(
-                            icon: Icon(Icons.bookmark_border),
-                            onPressed: () {}
-                        ),
+                            icon: Icon(Icons.bookmark_border, size: 32.0),
+                            onPressed: () {}),
                       ],
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(15.0),
+                      child: Column(
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                                style: TextStyle(color: Colors.black),
+                                children: [
+                                  TextSpan(text: "Liked by "),
+                                  TextSpan(
+                                      text: "test_user",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                  ),
+                                  TextSpan(text: "and "),
+                                  TextSpan(text: "others", style: TextStyle(fontWeight: FontWeight.bold)),
+
+                                ]),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
