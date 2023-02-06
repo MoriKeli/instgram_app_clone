@@ -28,6 +28,11 @@ class _HomepageState extends State<Homepage> {
     "images/gallery-8.jpg",
   ];
 
+  //function to refresh page
+  Future<void> RefreshPage() async {
+    await Future.delayed(Duration(seconds: 1));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,111 +56,114 @@ class _HomepageState extends State<Homepage> {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            //  Instagram stories
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: List.generate(
-                    7,
-                    (index) => Container(
-                          padding: EdgeInsets.all(10.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                radius: 37.0,
-                                backgroundImage:
-                                    AssetImage("images/gradient.jpg"),
-                                child: CircleAvatar(
-                                  radius: 34.0,
+      body: RefreshIndicator(
+        onRefresh: RefreshPage ,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              //  Instagram stories
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(
+                      7,
+                      (index) => Container(
+                            padding: EdgeInsets.all(10.0),
+                            child: Column(
+                              children: [
+                                CircleAvatar(
+                                  radius: 37.0,
                                   backgroundImage:
-                                      AssetImage(profileImages[index]),
-                                ),
-                              ),
-                              Text("Profile Name",
-                                  style: TextStyle(
-                                      fontSize: 12.0, color: Colors.black))
-                            ],
-                          ),
-                        )),
-              ),
-            ),
-
-            Divider(thickness: 0.5, color: Colors.black),
-            Column(
-              children: List.generate(
-                7,
-                (index) => Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    //  Header
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(10.0),
-                          child: CircleAvatar(
-                            radius: 25.0,
-                            backgroundImage: AssetImage("images/gradient.jpg"),
-                            child: CircleAvatar(
-                              radius: 23.0,
-                              backgroundImage: AssetImage(profileImages[index]),
-                            ),
-                          ),
-                        ),
-                        Text("Profile name"),
-                        Spacer(),
-                        IconButton(
-                            icon: Icon(Icons.more_vert), onPressed: () {}),
-                      ],
-                    ),
-                    //  images uploaded by the user
-                    Image(image: AssetImage(user_posts[index])),
-                    //  Footer for each posts card
-                    Row(
-                      children: [
-                        IconButton(
-                            icon: Icon(Icons.favorite_border, size: 32.0),
-                            onPressed: () {}),
-                        IconButton(
-                            icon: Icon(Icons.chat_bubble_outline_outlined, size: 32.0),
-                            onPressed: () {}),
-                        IconButton(icon: Icon(Icons.send, size: 32.0), onPressed: () {}),
-                        Spacer(),
-                        IconButton(
-                            icon: Icon(Icons.bookmark_border, size: 32.0),
-                            onPressed: () {}),
-                      ],
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(15.0),
-                      child: Column(
-                        children: [
-                          RichText(
-                            text: TextSpan(
-                                style: TextStyle(color: Colors.black),
-                                children: [
-                                  TextSpan(text: "Liked by "),
-                                  TextSpan(
-                                      text: "test_user",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                      AssetImage("images/gradient.jpg"),
+                                  child: CircleAvatar(
+                                    radius: 34.0,
+                                    backgroundImage:
+                                        AssetImage(profileImages[index]),
                                   ),
-                                  TextSpan(text: "and "),
-                                  TextSpan(text: "4057 others", style: TextStyle(fontWeight: FontWeight.bold)),
-
-                                ]),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
+                                ),
+                                Text("Profile Name",
+                                    style: TextStyle(
+                                        fontSize: 12.0, color: Colors.black))
+                              ],
+                            ),
+                          )),
                 ),
               ),
-            ),
-          ],
+
+              Divider(thickness: 0.5, color: Colors.black),
+              Column(
+                children: List.generate(
+                  7,
+                  (index) => Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      //  Header
+                      Row(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(10.0),
+                            child: CircleAvatar(
+                              radius: 25.0,
+                              backgroundImage: AssetImage("images/gradient.jpg"),
+                              child: CircleAvatar(
+                                radius: 23.0,
+                                backgroundImage: AssetImage(profileImages[index]),
+                              ),
+                            ),
+                          ),
+                          Text("Profile name"),
+                          Spacer(),
+                          IconButton(
+                              icon: Icon(Icons.more_vert), onPressed: () {}),
+                        ],
+                      ),
+                      //  images uploaded by the user
+                      Image(image: AssetImage(user_posts[index])),
+                      //  Footer for each posts card
+                      Row(
+                        children: [
+                          IconButton(
+                              icon: Icon(Icons.favorite_border, size: 32.0),
+                              onPressed: () {}),
+                          IconButton(
+                              icon: Icon(Icons.chat_bubble_outline_outlined, size: 32.0),
+                              onPressed: () {}),
+                          IconButton(icon: Icon(Icons.send, size: 32.0), onPressed: () {}),
+                          Spacer(),
+                          IconButton(
+                              icon: Icon(Icons.bookmark_border, size: 32.0),
+                              onPressed: () {}),
+                        ],
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(15.0),
+                        child: Column(
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                  style: TextStyle(color: Colors.black),
+                                  children: [
+                                    TextSpan(text: "Liked by "),
+                                    TextSpan(
+                                        text: "test_user",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                    ),
+                                    TextSpan(text: "and "),
+                                    TextSpan(text: "4057 others", style: TextStyle(fontWeight: FontWeight.bold)),
+
+                                  ]),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(
