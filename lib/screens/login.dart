@@ -81,8 +81,9 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.only(top: 40.0, bottom: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Continue as "),
+              children: const [
+                Image(image: AssetImage("images/fb-icon.png"), height: 20.0,),
+                Text(" Continue as "),
                 Text("test user", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.blue, decoration: TextDecoration.underline)),
               ],
             ),
