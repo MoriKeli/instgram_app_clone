@@ -13,69 +13,84 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: ListView(
-          children: [
-            Container(
-              alignment: Alignment.center,
-              padding: const EdgeInsets.only(top: 80.0, bottom: 50.0),
-              child: const Image(
-                image: AssetImage("images/logo.png"),
-                height: 70.0,
+        child: ListView(children: [
+          Container(
+            alignment: Alignment.center,
+            padding: const EdgeInsets.only(top: 80.0, bottom: 50.0),
+            child: const Image(
+              image: AssetImage("images/logo.png"),
+              height: 70.0,
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Phone number, username or email",
+                labelStyle: const TextStyle(fontSize: 10.0),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
+                fillColor: Colors.grey[200],
+                filled: true,
               ),
             ),
-            Container(
-              padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-              child: TextField(
-                decoration: InputDecoration(
-                    hintText: "Phone number, username or email",
-                    labelStyle: const TextStyle(fontSize: 10.0),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
-                    fillColor: Colors.grey[200],
-                    filled: true,
-                ),
+            // decoration: OutlineInputBorder(),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 7.0, horizontal: 5.0),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: "Password",
+                labelStyle: const TextStyle(fontSize: 18.0),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
+                fillColor: Colors.grey[200],
+                filled: true,
               ),
-              // decoration: OutlineInputBorder(),
+              obscureText: true,
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 7.0, horizontal: 5.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: "Password",
-                  labelStyle: const TextStyle(fontSize: 18.0),
-                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
-                  fillColor: Colors.grey[200],
-                  filled: true,
-                ),
-                obscureText: true,
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                "login",
+                style: TextStyle(fontSize: 20.0),
               ),
-            ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 5.0),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  "login",
-                  style: TextStyle(fontSize: 20.0),
-                ),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                  padding: MaterialStateProperty.all(const EdgeInsets.all(10.0)),
-                ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+                padding: MaterialStateProperty.all(const EdgeInsets.all(10.0)),
               ),
             ),
-
+          ),
           Padding(
-                padding: const EdgeInsets.only(top: 10.0, right: 10.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
-                    Text("Forgot password?", style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline))
-                  ],
-                ),
-              ),
-
-          ]
-        ),
+            padding: const EdgeInsets.only(top: 10.0, right: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [Text("Forgot password?", style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline))],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Divider(),
+                Text("OR"),
+                Divider(),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 40.0, bottom: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Continue as "),
+                Text("test user", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.blue, decoration: TextDecoration.underline)),
+              ],
+            ),
+          ),
+        ]),
       ),
       bottomNavigationBar: BottomAppBar(
         child: Padding(
