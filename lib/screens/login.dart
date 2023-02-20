@@ -51,15 +51,12 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
             child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                "login",
-                style: TextStyle(fontSize: 20.0),
-              ),
+              child: Text("login", style: TextStyle(fontSize: 20.0)),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
                 padding: MaterialStateProperty.all(const EdgeInsets.all(10.0)),
               ),
+              onPressed: () {},
             ),
           ),
           Padding(
