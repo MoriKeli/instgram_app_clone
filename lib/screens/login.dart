@@ -17,14 +17,14 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Container(
               alignment: Alignment.center,
-              padding: const EdgeInsets.symmetric(vertical: 100.0),
+              padding: const EdgeInsets.only(top: 80.0, bottom: 50.0),
               child: const Image(
                 image: AssetImage("images/logo.png"),
                 height: 70.0,
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 5.0),
+              padding: const EdgeInsets.only(left: 5.0, right: 5.0),
               child: TextField(
                 decoration: InputDecoration(
                     hintText: "Phone number, username or email",
@@ -64,10 +64,17 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
-            Container(
+          Padding(
+                padding: const EdgeInsets.only(top: 10.0, right: 10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: const [
+                    Text("Forgot password?", style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline))
+                  ],
+                ),
+              ),
 
-            ),
-          ],
+          ]
         ),
       ),
       bottomNavigationBar: BottomAppBar(
