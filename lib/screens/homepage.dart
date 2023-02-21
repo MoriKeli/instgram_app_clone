@@ -18,7 +18,7 @@ class _HomepageState extends State<Homepage> {
     "images/dps/girl-3.jpg",
   ];
 
-  List<String> user_posts = [
+  List<String> userPosts = [
     "images/1.jpg",
     "images/2.jpg",
     "images/3.jpg",
@@ -29,7 +29,7 @@ class _HomepageState extends State<Homepage> {
   ];
 
   //function to refresh page
-  Future<void> RefreshPage() async {
+  Future<void> refreshPage() async {
     await Future.delayed(Duration(seconds: 1));
   }
 
@@ -37,9 +37,8 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // elevation: 10.0,
-        // leading: Icon(Icons.camera_alt_outlined, color: Colors.black, size: 30.0),
-        title: Image(
+        leading: const Icon(Icons.camera_alt_outlined, color: Colors.black, size: 30.0),
+        title: const Image(
           image: AssetImage("images/logo.png"),
           height: 38.0,
           // fit: BoxFit.contain,
@@ -47,7 +46,7 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: Colors.white,
         actions: [
           IconButton(
-            icon: Icon(Icons.favorite_border, color: Colors.black, size: 30.0),
+            icon: const Icon(Icons.favorite_border, color: Colors.black, size: 30.0),
             onPressed: () {},
           ),
           IconButton(
@@ -57,7 +56,7 @@ class _HomepageState extends State<Homepage> {
         ],
       ),
       body: RefreshIndicator(
-        onRefresh: RefreshPage ,
+        onRefresh: refreshPage ,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -90,7 +89,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
 
-              Divider(thickness: 0.5, color: Colors.black),
+              const Divider(thickness: 0.5, color: Colors.black),
               Column(
                 children: List.generate(
                   7,
@@ -118,30 +117,30 @@ class _HomepageState extends State<Homepage> {
                         ],
                       ),
                       //  images uploaded by the user
-                      Image(image: AssetImage(user_posts[index])),
+                      Image(image: AssetImage(userPosts[index])),
                       //  Footer for each posts card
                       Row(
                         children: [
                           IconButton(
-                              icon: Icon(Icons.favorite_border, size: 32.0),
+                              icon: const Icon(Icons.favorite_border, size: 32.0),
                               onPressed: () {}),
                           IconButton(
-                              icon: Icon(Icons.chat_bubble_outline_outlined, size: 32.0),
+                              icon: const Icon(Icons.chat_bubble_outline_outlined, size: 32.0),
                               onPressed: () {}),
-                          IconButton(icon: Icon(Icons.send, size: 32.0), onPressed: () {}),
-                          Spacer(),
+                          IconButton(icon: const Icon(Icons.send, size: 32.0), onPressed: () {}),
+                          const Spacer(),
                           IconButton(
-                              icon: Icon(Icons.bookmark_border, size: 32.0),
+                              icon: const Icon(Icons.bookmark_border, size: 32.0),
                               onPressed: () {}),
                         ],
                       ),
                       Container(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Column(
                           children: [
                             RichText(
-                              text: TextSpan(
-                                  style: TextStyle(color: Colors.black),
+                              text: const TextSpan(
+                                  style: const TextStyle(color: Colors.black),
                                   children: [
                                     TextSpan(text: "Liked by "),
                                     TextSpan(
@@ -171,35 +170,35 @@ class _HomepageState extends State<Homepage> {
         child: Row(
           children: [
             IconButton(
-              icon: Icon(Icons.home_outlined),
+              icon: const Icon(Icons.home_outlined),
               iconSize: 40.0,
               onPressed: () {},
             ),
-            Spacer(),
+            const Spacer(),
             IconButton(
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
               iconSize: 40.0,
               onPressed: () {},
             ),
-            Spacer(),
+            const Spacer(),
             IconButton(
-              icon: Icon(Icons.add_box_outlined),
+              icon: const Icon(Icons.add_box_outlined),
               iconSize: 40.0,
               onPressed: () {},
             ),
-            Spacer(),
+            const Spacer(),
             IconButton(
-              icon: Icon(Icons.ondemand_video_outlined),
+              icon: const Icon(Icons.ondemand_video_outlined),
               iconSize: 40.0,
               onPressed: () {},
             ),
-            Spacer(),
+            const Spacer(),
             IconButton(
-              icon: Icon(Icons.person_outline_rounded),
+              icon: const Icon(Icons.person_outline_rounded),
               iconSize: 40.0,
               onPressed: () {},
             ),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),
