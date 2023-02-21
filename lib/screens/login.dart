@@ -56,7 +56,9 @@ class _LoginPageState extends State<LoginPage> {
                 backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
                 padding: MaterialStateProperty.all(const EdgeInsets.all(10.0)),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/home');
+              },
             ),
           ),
           Padding(
