@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/screens/homepage.dart';
+import 'package:instagram_clone/screens/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Homepage(),
+      // home: LoginPage(),
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home': (context) => Homepage(),
+      },
     );
   }
 }
