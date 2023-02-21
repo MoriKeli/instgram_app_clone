@@ -62,20 +62,33 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10.0, right: 10.0),
+            padding: const EdgeInsets.only(top: 10.0, right: 10.0, bottom: 55.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: const [Text("Forgot password?", style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline))],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 50.0),
+            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 70.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Divider(),
-                Text("OR"),
-                Divider(),
+              children: [
+                Flexible(
+                  child: Container(
+                    height: 1,
+                    color: Colors.black87,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12.0),
+                  child: Text("OR", style: TextStyle(fontWeight: FontWeight.w600)),
+                ),
+                Flexible(
+                  child: Container(
+                    height: 1,
+                    color: Colors.black87,
+                  ),
+                )
               ],
             ),
           ),
@@ -84,7 +97,10 @@ class _LoginPageState extends State<LoginPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                Image(image: AssetImage("images/fb-icon.png"), height: 20.0,),
+                Image(
+                  image: AssetImage("images/fb-icon.png"),
+                  height: 20.0,
+                ),
                 Text(" Continue as "),
                 Text("test user", style: TextStyle(fontWeight: FontWeight.w500, color: Colors.blue, decoration: TextDecoration.underline)),
               ],
