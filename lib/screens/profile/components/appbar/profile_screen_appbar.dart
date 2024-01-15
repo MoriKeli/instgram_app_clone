@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/common/message_icon.dart';
+import 'package:instagram_clone/screens/profile/components/appbar/settings_bottom_sheet.dart';
 
 
 AppBar profileScreenAppBar(context) {
@@ -13,16 +15,22 @@ AppBar profileScreenAppBar(context) {
             style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
-              overflow: TextOverflow.ellipsis
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ),
-        Icon(Icons.expand_more)
+        Icon(Icons.expand_more),
       ],
     ),
     actions: [
-      ImageIcon(AssetImage('images/icons/message-icon.png')),
-      IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+      MessageIcon(),
+      IconButton(
+        onPressed: () => showModalBottomSheet(
+          context: context,
+          builder: (context) => SettingsBottomSheet(),
+        ),
+        icon: Icon(Icons.menu),
+      ),
     ],
   );
 }
