@@ -20,6 +20,7 @@ class FormInputField extends StatelessWidget {
     return SizedBox(
       height: 44.0,
       child: TextFormField(
+        controller: textEditingController,
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: TextStyle(fontSize: 12.0),
