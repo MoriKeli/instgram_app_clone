@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/constants/colors.dart';
 import 'package:instagram_clone/models/user_profile/my_posts.dart';
 import 'package:instagram_clone/models/user_profile/my_reels.dart';
 import 'package:instagram_clone/models/user_profile/tagged_posts.dart';
