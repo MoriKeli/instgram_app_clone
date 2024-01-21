@@ -131,4 +131,3 @@ class ProfileScreenTabs extends StatelessWidget {
     );
   }
 }
-
