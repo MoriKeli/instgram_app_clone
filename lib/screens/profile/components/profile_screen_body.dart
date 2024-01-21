@@ -67,14 +67,42 @@ class TabsContent extends StatelessWidget {
     return SizedBox(
       height:
       // if array is empty set the height to 200.0 otherwise calculate max height
-      myPosts.isEmpty ? 200.0 : (myPosts.length * (MediaQuery.of(context).size.height * .18  + 4.0) / 3),  // max height = (no. of images in the array * height of each image + margins) / 3 columns
+      myPosts.isEmpty
+        ? 200.0
+        : (myPosts.length * (MediaQuery.of(context).size.height * .18 + 4.0) / 3), // max height = (no. of images in the array * height of each image + margins) / 3 columns
       child: TabBarView(
         controller: _tabController,
         children: [
-          myPosts.isEmpty ? Center(child: Text('No post')) : AllPostsWidget(),   // if the user has not posted anything display 'No post' otherwise display their post(s)
+          // 1. My posts tab view
+          myPosts.isEmpty
+            ? Center(child: Text('No post'))
+            : AllPostsWidget(), // if the user has not posted anything display 'No post' otherwise display their post(s)
+          
+          // 2. Reels tab view
           myReels.isEmpty ? Center(child: Text('No reel')) : UserReelsWidget(),
-          taggedPosts.isEmpty ? Center(child: Text('No tagged post')) : TaggedPostsWidget(),
-
+          
+          // 3. tagged posts tab view
+          taggedPosts.isEmpty
+            ? Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 64.0, vertical: 40.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Photos and videos of you',
+                        style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "When people tag you in photos and videos, they'll appear here.",
+                        softWrap: true,
+                        style: TextStyle(color: kTextSecondaryColor),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                )
+              )
+            : TaggedPostsWidget(),
         ],
       ),
     );
