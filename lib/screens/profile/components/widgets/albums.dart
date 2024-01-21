@@ -16,16 +16,17 @@ class Album extends StatelessWidget {
       child: Column(
         children: [
           Container(
-              height: MediaQuery.of(context).size.height * .12,
-              padding: EdgeInsets.all(4.0),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 1.5),
-                shape: BoxShape.circle,
-              ),
-              child: CircleAvatar(
-                radius: MediaQuery.of(context).size.width * .08,
-                backgroundImage: AssetImage(coverPhotoPath),
-              )),
+            height: MediaQuery.of(context).size.height * .12,
+            padding: EdgeInsets.all(4.0),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 1.5),
+              shape: BoxShape.circle,
+            ),
+            child: CircleAvatar(
+              radius: MediaQuery.of(context).size.width * .08,
+              backgroundImage: AssetImage(coverPhotoPath),
+            ),
+          ),
           Text(
             albumName,
             overflow: TextOverflow.ellipsis,
