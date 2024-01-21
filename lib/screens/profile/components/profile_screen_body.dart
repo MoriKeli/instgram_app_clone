@@ -45,8 +45,8 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> with SingleTicker
           SizedBox(height: 15.0),
           UserAlbums(), // album containing user's instagram stories
           SizedBox(height: 16.0),
-          ProfileScreenTabs(tabController: _tabController),   // tabs
-          TabsContent(tabController: _tabController),   // content for each tab - posts, reels & tagged
+          ProfileScreenTabs(tabController: _tabController), // tabs
+          TabsContent(tabController: _tabController), // content for each tab - posts, reels & tagged
         ],
       ),
     );
