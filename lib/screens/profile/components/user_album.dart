@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/models/user_profile/albums.dart';
+import 'package:instagram_clone/screens/profile/components/widgets/add_new_album_btn.dart';
 import 'package:instagram_clone/screens/profile/components/widgets/albums.dart';
+
 
 class UserAlbums extends StatelessWidget {
   const UserAlbums({
