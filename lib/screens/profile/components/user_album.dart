@@ -14,13 +14,20 @@ class UserAlbums extends StatelessWidget {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-          children: List.generate(
-            userAlbumPhotos.length,
-            (index) => Album(
-              coverPhotoPath: userAlbumPhotos[index].coverPhoto,
-              albumName: userAlbumPhotos[index].albumName,
+          children: [
+            Row(
+              children: List.generate(
+                userAlbumPhotos.length,
+                (index) => Album(
+                  coverPhotoPath: userAlbumPhotos[index].coverPhoto,
+                  albumName: userAlbumPhotos[index].albumName,
+                ),
+              ),
             ),
-          )
+            SizedBox(width: 8.0),
+            AddNewAlbumBtn(),   // add new album button
+            SizedBox(width: 20.0),
+          ],
         ),
       ),
     );
