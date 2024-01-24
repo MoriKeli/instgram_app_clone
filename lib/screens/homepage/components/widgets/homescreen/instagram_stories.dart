@@ -63,9 +63,7 @@ class InstagramStoriesWidget extends StatelessWidget {
   }
 }
 
-
 // EXTRACTED WIDGETS
-
 
 // 1. FollowedUsersStoriesWidget - Widget to show IG stories for people I follow
 class FollowedUsersStoriesWidget extends StatelessWidget {
@@ -73,25 +71,45 @@ class FollowedUsersStoriesWidget extends StatelessWidget {
     super.key,
     required this.instagramStories,
     required this.currentStoriesIndex,
+    this.isViewed = false,
   });
 
   final List<InstagramStories> instagramStories;
   final int currentStoriesIndex;
+  final bool isViewed;
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: MediaQuery.of(context).size.width * .114,
-      backgroundImage: AssetImage('images/gradient.jpg'),
-      child: CircleAvatar(
-        radius: MediaQuery.of(context).size.width * .104,
-        backgroundImage:
-            AssetImage(instagramStories[currentStoriesIndex].profilePic),
-      ),
-    );
+    return 
+    /* 
+      If the story is viewed, display a circle avatar sorrounded with a white border. 
+      Otherwise, display a circle avatar with the Instagram-like gradient.
+    */
+    isViewed == true
+      ? Container(
+          height: MediaQuery.of(context).size.height * .12,
+          padding: EdgeInsets.all(4.0),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.white, width: 1.5),
+            shape: BoxShape.circle,
+          ),
+          child: CircleAvatar(
+            radius: MediaQuery.of(context).size.width * 12,
+            backgroundImage:
+                AssetImage(instagramStories[currentStoriesIndex].profilePic),
+          ),
+        )
+      : CircleAvatar(
+          radius: MediaQuery.of(context).size.width * .114,
+          backgroundImage: AssetImage('images/gradient.jpg'),
+          child: CircleAvatar(
+            radius: MediaQuery.of(context).size.width * .104,
+            backgroundImage:
+                AssetImage(instagramStories[currentStoriesIndex].profilePic),
+          ),
+        );
   }
 }
-
 
 // 2. MyStoriesWidget - Widget to show my IG stories
 class MyStoriesWidget extends StatelessWidget {
@@ -99,26 +117,45 @@ class MyStoriesWidget extends StatelessWidget {
     super.key,
     required this.instagramStories,
     required this.currentStoriesIndex,
+    this.isViewed = false,
   });
 
   final List<InstagramStories> instagramStories;
   final int currentStoriesIndex;
+  final bool isViewed;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        CircleAvatar(
-          radius: MediaQuery.of(context).size.width * .114,
-          backgroundImage:
-              AssetImage('images/gradient.jpg'),
-          child: CircleAvatar(
-            radius:
-                MediaQuery.of(context).size.width * .102,
-            backgroundImage: AssetImage(
-                instagramStories[currentStoriesIndex].profilePic),
-          ),
-        ),
+        isViewed == true
+          ? Container(
+            height: MediaQuery.of(context).size.height * .12,
+            padding: EdgeInsets.all(4.0),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white, width: 1.5),
+              shape: BoxShape.circle,
+            ),
+            child: CircleAvatar(
+              radius: MediaQuery.of(context).size.width * .114,
+              backgroundImage: AssetImage('images/gradient.jpg'),
+              child: CircleAvatar(
+                radius: MediaQuery.of(context).size.width * .102,
+                backgroundImage: AssetImage(
+                    instagramStories[currentStoriesIndex].profilePic),
+              ),
+            ),
+          )
+          : CircleAvatar(
+              radius: MediaQuery.of(context).size.width * .114,
+              backgroundImage: AssetImage('images/gradient.jpg'),
+              child: CircleAvatar(
+                radius: MediaQuery.of(context).size.width * .102,
+                backgroundImage: AssetImage(
+                    instagramStories[currentStoriesIndex].profilePic),
+              ),
+            ),
+        
         Positioned(
           bottom: 4,
           right: 8,
