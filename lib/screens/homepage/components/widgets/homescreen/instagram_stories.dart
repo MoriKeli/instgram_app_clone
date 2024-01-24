@@ -21,9 +21,9 @@ class InstagramStoriesWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Row(
-          children: 
-          // generate a list of all instagram stories related to the current user
-          List.generate(
+          children:
+            // generate a list of all instagram stories related to the current user
+            List.generate(
             userFeed.length,
             (index) => SizedBox(
               width: MediaQuery.of(context).size.width * .25,
