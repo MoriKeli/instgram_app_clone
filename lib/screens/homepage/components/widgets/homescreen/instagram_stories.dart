@@ -31,11 +31,19 @@ class InstagramStoriesWidget extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: 
+                    child:
                       // if index is 0, show my stories, else show stories for the people I'm following
                       index == 0
-                      ? MyStoriesWidget(instagramStories: instagramStories, currentStoriesIndex: index,)
-                      : FollowedUsersStoriesWidget(instagramStories: instagramStories, currentStoriesIndex: index,),
+                        ? MyStoriesWidget(
+                            instagramStories: instagramStories,
+                            currentStoriesIndex: index,
+                            isViewed: instagramStories[index].isViewed,
+                          )
+                        : FollowedUsersStoriesWidget(
+                            instagramStories: instagramStories,
+                            currentStoriesIndex: index,
+                            isViewed: instagramStories[index].isViewed,
+                          ),
                   ),
                   Text(
                     instagramStories[index].username,
