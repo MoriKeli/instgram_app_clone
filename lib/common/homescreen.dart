@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/add_post/new_posts_screen.dart';
 import 'package:instagram_clone/screens/homepage/components/widgets/homescreen/bottom_navbar.dart';
 import 'package:instagram_clone/screens/homepage/homepage.dart';
+import 'package:instagram_clone/screens/profile/profile_screen.dart';
+import 'package:instagram_clone/screens/search/search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = '/homescreen';
@@ -15,6 +18,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _screens = [
     const HomeScreenWidgets(),
+    const SearchScreen(),
+    const NewPostsScreen(),
+    const Center(child: Text('Screen will be updated soon.')),
+    const ProfileScreen(),
     
   ];
 
