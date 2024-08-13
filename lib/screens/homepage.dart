@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
-  const Homepage({Key? key}) : super(key: key);
+  const Homepage({super.key});
 
   @override
   State<Homepage> createState() => _HomepageState();
@@ -30,7 +30,7 @@ class _HomepageState extends State<Homepage> {
 
   //function to refresh page
   Future<void> refreshPage() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
   }
 
   @override
@@ -50,7 +50,7 @@ class _HomepageState extends State<Homepage> {
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.send, color: Colors.black, size: 30.0),
+            icon: const Icon(Icons.send, color: Colors.black, size: 30.0),
             onPressed: () {},
           ),
         ],
@@ -67,20 +67,20 @@ class _HomepageState extends State<Homepage> {
                   children: List.generate(
                       7,
                       (index) => Container(
-                            padding: EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Column(
                               children: [
                                 CircleAvatar(
                                   radius: 37.0,
                                   backgroundImage:
-                                      AssetImage("images/gradient.jpg"),
+                                      const AssetImage("images/gradient.jpg"),
                                   child: CircleAvatar(
                                     radius: 34.0,
                                     backgroundImage:
                                         AssetImage(profileImages[index]),
                                   ),
                                 ),
-                                Text("Profile Name",
+                                const Text("Profile Name",
                                     style: TextStyle(
                                         fontSize: 12.0, color: Colors.black))
                               ],
@@ -100,20 +100,20 @@ class _HomepageState extends State<Homepage> {
                       Row(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: CircleAvatar(
                               radius: 25.0,
-                              backgroundImage: AssetImage("images/gradient.jpg"),
+                              backgroundImage: const AssetImage("images/gradient.jpg"),
                               child: CircleAvatar(
                                 radius: 23.0,
                                 backgroundImage: AssetImage(profileImages[index]),
                               ),
                             ),
                           ),
-                          Text("Profile name"),
-                          Spacer(),
+                          const Text("Profile name"),
+                          const Spacer(),
                           IconButton(
-                              icon: Icon(Icons.more_vert), onPressed: () {}),
+                              icon: const Icon(Icons.more_vert), onPressed: () {}),
                         ],
                       ),
                       //  images uploaded by the user
@@ -140,7 +140,7 @@ class _HomepageState extends State<Homepage> {
                           children: [
                             RichText(
                               text: const TextSpan(
-                                  style: const TextStyle(color: Colors.black),
+                                  style: TextStyle(color: Colors.black),
                                   children: [
                                     TextSpan(text: "Liked by "),
                                     TextSpan(
