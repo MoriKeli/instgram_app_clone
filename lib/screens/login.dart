@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -51,21 +51,21 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
             child: ElevatedButton(
-              child: Text("login", style: TextStyle(fontSize: 20.0)),
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                padding: MaterialStateProperty.all(const EdgeInsets.all(10.0)),
+                backgroundColor: WidgetStateProperty.all(Colors.blueAccent),
+                padding: WidgetStateProperty.all(const EdgeInsets.all(10.0)),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/home');
               },
+              child: const Text("login", style: TextStyle(fontSize: 20.0)),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10.0, right: 10.0, bottom: 55.0),
+          const Padding(
+            padding: EdgeInsets.only(top: 10.0, right: 10.0, bottom: 55.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: const [Text("Forgot password?", style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline))],
+              children: [Text("Forgot password?", style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline))],
             ),
           ),
           Padding(
@@ -92,11 +92,11 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 40.0, bottom: 20.0),
+          const Padding(
+            padding: EdgeInsets.only(top: 40.0, bottom: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Image(
                   image: AssetImage("images/fb-icon.png"),
                   height: 20.0,
@@ -108,12 +108,12 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ]),
       ),
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: const BottomAppBar(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text("Don't have an account? ", textAlign: TextAlign.center),
               Text("Sign up", style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline))
             ],
