@@ -4,11 +4,11 @@ import 'package:instagram_clone/screens/homepage.dart';
 import 'package:instagram_clone/screens/login.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const InstagramAppClone());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class InstagramAppClone extends StatelessWidget {
+  const InstagramAppClone({super.key});
 
   @override
   Widget build(BuildContext context) {
