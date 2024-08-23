@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
+  static String routeName = '/login';
   const Homepage({super.key});
 
   @override
