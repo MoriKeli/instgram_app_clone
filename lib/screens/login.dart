@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: WidgetStateProperty.all(const EdgeInsets.all(10.0)),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/home');
+                Navigator.pushNamed(context, '/homescreen');
               },
               child: const Text("login", style: TextStyle(fontSize: 20.0)),
             ),
