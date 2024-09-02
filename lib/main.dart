@@ -19,6 +19,8 @@ class InstagramAppClone extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      initialRoute: LoginScreen.routeName,
+      home: LoginScreen(),
       routes: routes,
     );
   }
