@@ -16,6 +16,24 @@ class InstagramAppClone extends StatelessWidget {
       title: 'Instagram Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
+        appBarTheme: AppBarTheme(
+          backgroundColor: kAppBarBackgroundColor,
+          iconTheme: IconThemeData(color: kIconColor),
+        ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: kAppBarBackgroundColor,
+          selectedIconTheme: IconThemeData(
+            color: kIconColor,
+            size: 30.0,
+          ),
+          unselectedIconTheme: IconThemeData(
+            color: kIconColor,
+            size: 30.0,
+          ),
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+        ),
+        iconTheme: IconThemeData(color: kIconColor),
         scaffoldBackgroundColor: kBackgroundColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
