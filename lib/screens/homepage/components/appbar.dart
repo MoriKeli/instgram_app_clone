@@ -4,23 +4,26 @@ import 'package:instagram_clone/constants/colors.dart';
 
 AppBar appBar() {
   return AppBar(
-    leading: const Icon(Icons.camera_alt_outlined, color: Colors.black, size: 30.0),
+    leading: Padding(
+      padding: const EdgeInsets.only(left: 10.0),
+      child: const Icon(Icons.camera_alt_outlined, size: 30.0),
+    ),
+    leadingWidth: 27.0,
     title: const Image(
-      image: AssetImage("images/logo.png"),
-      height: 38.0,
+      image: AssetImage("images/logo-black-bg.jpg"),
+      height: 50.0,
       // fit: BoxFit.contain,
     ),
     backgroundColor: kBackgroundColor,
     actions: [
       IconButton(
-        icon: const Icon(Icons.favorite_border, color: Colors.black, size: 30.0),
+        icon: const Icon(Icons.favorite_border, size: 30.0),
         onPressed: () {},
       ),
       IconButton(
-        icon: const Icon(Icons.send, color: Colors.black, size: 30.0),
+        icon: const Icon(Icons.send, size: 30.0),
         onPressed: () {},
       ),
     ],
   );
 }
-
