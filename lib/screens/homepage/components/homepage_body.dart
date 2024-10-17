@@ -36,9 +36,10 @@ class HomepageBody extends StatelessWidget {
                                     AssetImage(profileImages[index]),
                               ),
                             ),
-                            const Text("Profile Name",
-                                style: TextStyle(
-                                    fontSize: 12.0, color: Colors.black))
+                            const Text(
+                              "Profile Name",
+                              style: TextStyle(fontSize: 12.0,)
+                            )
                           ],
                         ),
                       )),
@@ -96,7 +97,6 @@ class HomepageBody extends StatelessWidget {
                       children: [
                         RichText(
                           text: const TextSpan(
-                              style: TextStyle(color: Colors.black),
                               children: [
                                 TextSpan(text: "Liked by "),
                                 TextSpan(
@@ -105,7 +105,7 @@ class HomepageBody extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     ),
                                 ),
-                                TextSpan(text: "and "),
+                                TextSpan(text: " and "),
                                 TextSpan(text: "4057 others", style: TextStyle(fontWeight: FontWeight.bold)),
     
                               ]),
