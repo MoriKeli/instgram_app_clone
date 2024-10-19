@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/constants/colors.dart';
 import 'package:instagram_clone/routes.dart';
-import 'package:instagram_clone/screens/login.dart';
+import 'package:instagram_clone/screens/login/login.dart';
 
 void main() {
   runApp(const InstagramAppClone());
@@ -13,7 +13,7 @@ class InstagramAppClone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Instagram Clone',
+      // title: 'Instagram Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         appBarTheme: AppBarTheme(
@@ -35,6 +35,11 @@ class InstagramAppClone extends StatelessWidget {
         ),
         iconTheme: IconThemeData(color: kIconColor),
         scaffoldBackgroundColor: kBackgroundColor,
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: WidgetStateProperty.all<Color>(kBlueColor),
+          )
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: LoginScreen.routeName,
