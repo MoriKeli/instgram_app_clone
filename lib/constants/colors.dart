@@ -7,3 +7,5 @@ const kBlueColor = Color.fromRGBO(0, 149, 246, 1);
 const kPrimaryColor = Colors.white;
 const kSecondaryColor = Colors.grey;
 const kIconColor = Colors.white;
+const kVerifiedAccountIcon = Color.fromRGBO(0, 149, 246, 1);
+const kTextColor = Colors.white;
