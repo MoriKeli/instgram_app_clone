@@ -13,7 +13,6 @@ class InstagramAppClone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // title: 'Instagram Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         appBarTheme: AppBarTheme(
