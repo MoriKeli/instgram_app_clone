@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/constants/colors.dart';
 
 
 class LoginButton extends StatelessWidget {
@@ -24,7 +25,7 @@ class LoginButton extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, '/homescreen');
         },
-        child: const Text("login", style: TextStyle(fontSize: 16.0)),
+        child: const Text("login", style: TextStyle(fontSize: 16.0, color: kTextColor)),
       ),
     );
   }
