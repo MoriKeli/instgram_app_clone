@@ -25,8 +25,8 @@ class _HomeScreenWidgetsState extends State<HomeScreenWidgets> {
       body: RefreshIndicator(
         onRefresh: refreshPage,
         child: HomepageBody(
-          profileImages: profileImages,
-          userPosts: userPosts,
+          instagramStories: stories,
+          userFeed: newsFeed,
         ),
       ),
     );
