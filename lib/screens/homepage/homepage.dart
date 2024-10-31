@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/models/posts.dart';
+import 'package:instagram_clone/models/stories.dart';
 import 'package:instagram_clone/screens/homepage/components/appbar.dart';
 import 'package:instagram_clone/screens/homepage/components/homepage_body.dart';
 
