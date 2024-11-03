@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/screens/homepage/components/widget/bottom_navbar.dart';
+import 'package:instagram_clone/screens/homepage/components/widgets/homescreen/bottom_navbar.dart';
 import 'package:instagram_clone/screens/homepage/homepage.dart';
 
 class HomeScreen extends StatefulWidget {
