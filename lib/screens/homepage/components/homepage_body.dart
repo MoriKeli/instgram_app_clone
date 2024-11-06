@@ -1,123 +1,76 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/models/posts.dart';
+import 'package:instagram_clone/models/stories.dart';
+import 'package:instagram_clone/screens/homepage/components/widgets/posts_card/card_header.dart';
+import 'package:instagram_clone/screens/homepage/components/widgets/posts_card/comments_widget.dart';
+import 'package:instagram_clone/screens/homepage/components/widgets/homescreen/instagram_stories.dart';
+import 'package:instagram_clone/screens/homepage/components/widgets/posts_card/posts_description_widget.dart';
+import 'package:instagram_clone/screens/homepage/components/widgets/posts_card/total_likes_widget.dart';
+import 'package:instagram_clone/screens/homepage/components/widgets/posts_card/tray_icon_widget.dart';
 
 
 class HomepageBody extends StatelessWidget {
+  final List<InstagramStories> instagramStories;
+  final List<Posts> userFeed;
+
   const HomepageBody({
     super.key,
-    required this.profileImages,
-    required this.userPosts,
+    required this.instagramStories,
+    required this.userFeed,
   });
-
-  final List<String> profileImages;
-  final List<String> userPosts;
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         children: [
-          //  Instagram stories
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: List.generate(
-                  7,
-                  (index) => Container(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Column(
-                          children: [
-                            CircleAvatar(
-                              radius: 37.0,
-                              backgroundImage:
-                                  const AssetImage("images/gradient.jpg"),
-                              child: CircleAvatar(
-                                radius: 34.0,
-                                backgroundImage:
-                                    AssetImage(profileImages[index]),
-                              ),
-                            ),
-                            const Text(
-                              "Profile Name",
-                              style: TextStyle(fontSize: 12.0,)
-                            )
-                          ],
-                        ),
-                      )),
-            ),
+          // Instagram stories
+          InstagramStoriesWidget(
+            userFeed: userFeed,
+            instagramStories: instagramStories,
           ),
-    
-          const Divider(thickness: 0.5, color: Colors.black),
-          Column(
-            children: List.generate(
-              7,
-              (index) => Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  //  Header
-                  Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(10.0),
-                        child: CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: const AssetImage("images/gradient.jpg"),
-                          child: CircleAvatar(
-                            radius: 23.0,
-                            backgroundImage: AssetImage(profileImages[index]),
-                          ),
-                        ),
-                      ),
-                      const Text("Profile name"),
-                      const Spacer(),
-                      IconButton(
-                          icon: const Icon(Icons.more_vert), onPressed: () {}),
-                    ],
-                  ),
-                  //  images uploaded by the user
-                  Image(image: AssetImage(userPosts[index])),
-                  //  Footer for each posts card
-                  Row(
-                    children: [
-                      IconButton(
-                          icon: const Icon(Icons.favorite_border, size: 32.0),
-                          onPressed: () {}),
-                      IconButton(
-                          icon: const Icon(Icons.chat_bubble_outline_outlined, size: 32.0),
-                          onPressed: () {}),
-                      IconButton(icon: const Icon(Icons.send, size: 32.0), onPressed: () {}),
-                      const Spacer(),
-                      IconButton(
-                          icon: const Icon(Icons.bookmark_border, size: 32.0),
-                          onPressed: () {}),
-                    ],
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      children: [
-                        RichText(
-                          text: const TextSpan(
-                              children: [
-                                TextSpan(text: "Liked by "),
-                                TextSpan(
-                                    text: "test_user",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                ),
-                                TextSpan(text: " and "),
-                                TextSpan(text: "4057 others", style: TextStyle(fontWeight: FontWeight.bold)),
-    
-                              ]),
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
+
+          Divider(
+            color: Colors.grey[500],
+            thickness: 0.5,
           ),
+
+          // Feed
+          NewsFeed(userFeed: userFeed)
         ],
+      ),
+    );
+  }
+}
+
+class NewsFeed extends StatelessWidget {
+  const NewsFeed({
+    super.key,
+    required this.userFeed,
+  });
+
+  final List<Posts> userFeed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: List.generate(
+        userFeed.length,
+        (index) => Column(
+          children: [
+            PostCardHeader(userFeed: userFeed, currentPostIndex: index),  // card header
+            Image.asset(userFeed[index].imageFile),   // posted image file
+            TrayIcon(), // this widget has "like", "comment", "message" and "save" icons
+            TotalLikesWidget(userFeed: userFeed, currentPostIndex: index),  // displays total likes for the current post
+            
+            if (userFeed[index].description != '')  // show description if the post has description
+              PostDescriptionWidget(userFeed: userFeed, currentPostIndex: index), // displays post description
+            
+            if (userFeed[index].totalComments != 0)
+              CommentsWidget(userFeed: userFeed, currentPostIndex: index),
+    
+          ],
+        ),
       ),
     );
   }
