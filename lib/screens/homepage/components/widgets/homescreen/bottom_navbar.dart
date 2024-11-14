@@ -28,13 +28,13 @@ class BottomNavBar extends StatelessWidget {
           label: '',
         ),
         BottomNavigationBarItem(
-          activeIcon: Icon(Icons.add_box),
+          activeIcon: Icon(Icons.add_box_rounded),
           icon: Icon(Icons.add_box_outlined),
           label: '',
         ),
         BottomNavigationBarItem(
-          activeIcon: Icon(Icons.ondemand_video_outlined),
-          icon: Icon(Icons.ondemand_video),
+          activeIcon: ImageIcon(AssetImage('images/icons/reels-filled-icon.png')),
+          icon: ImageIcon(AssetImage('images/icons/reels-icon.png')),
           label: '',
         ),
         BottomNavigationBarItem(
