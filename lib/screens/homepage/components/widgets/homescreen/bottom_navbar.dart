@@ -16,6 +16,7 @@ class BottomNavBar extends StatelessWidget {
     return BottomNavigationBar(
       currentIndex: screenIndex,
       onTap: tappedIcon,
+      type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
           activeIcon: Icon(Icons.home_filled),
