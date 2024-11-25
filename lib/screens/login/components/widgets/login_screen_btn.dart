@@ -9,12 +9,7 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 5.0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.zero,
-        shape: BoxShape.rectangle
-      ),
+    return SizedBox(
       width: double.infinity,
       child: TextButton(
         style: ButtonStyle(
