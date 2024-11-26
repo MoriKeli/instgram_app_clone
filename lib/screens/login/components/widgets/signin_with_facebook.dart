@@ -17,9 +17,9 @@ class SignInWithFacebook extends StatelessWidget {
             image: AssetImage("images/fb-icon.png"),
             height: 20.0,
           ),
-          Text(" Continue as "),
+          Text(" Continue with "),
           Text(
-            "test user",
+            "facebook",
             style: TextStyle(
               fontWeight: FontWeight.w500,
               color: Colors.blue,
