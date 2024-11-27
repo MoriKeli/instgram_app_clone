@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/constants/colors.dart';
+import 'package:instagram_clone/screens/signup/signup.dart';
 
 
 class LoginScreenBottomNavBar extends StatelessWidget {
@@ -18,10 +19,13 @@ class LoginScreenBottomNavBar extends StatelessWidget {
             "Don't have an account? ",
             textAlign: TextAlign.center,
           ),
-          Text(
-            "Sign up",
-            style: TextStyle(
-              color: kBlueColor,
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, SignupScreen.routeName),
+            child: Text(
+              "Sign up",
+              style: TextStyle(
+                color: kBlueColor,
+              ),
             ),
           )
         ],
