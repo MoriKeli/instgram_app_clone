@@ -1,5 +1,9 @@
 # Instagram mobile app clone
 
+| Homescreen | Homescreen on scroll |
+| -----------| -------------------- |
+|    ![Screenshot_20241214-180854](https://github.com/user-attachments/assets/da1fba59-fa63-4778-bb2d-e89e1877d162) |  ![Screenshot_20241214-180911](https://github.com/user-attachments/assets/fce4d39e-c354-4b5e-b46a-14fcb83cb585)|
+
 
 ## Overview
 This is a Instagram mobile app clone developed for both Android and iOS.
@@ -50,5 +54,9 @@ Incase of a bug or you wish to make a contribution, create a new branch using th
 You can also open an issue using the `Issues` tab. The reported issue will be reviewed and a solution may be provided.
 
 
-### Request
+## Request
 Don't forget to star the repo 🌟😉
+
+
+## Known issues
+
