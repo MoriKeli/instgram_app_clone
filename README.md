@@ -11,7 +11,7 @@
 
 
 ## Overview
-This is a Instagram mobile app clone developed for both Android and iOS. The app is still unser development phase. More features coing soon.
+This is a Instagram mobile app clone developed for both Android and iOS.
 
 
 ## Developer instructions
@@ -64,4 +64,4 @@ Don't forget to star the repo 🌟😉
 
 
 ## Known issues
-
+The app is still under development. More features will be added with time.
