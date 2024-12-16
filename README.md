@@ -1,12 +1,17 @@
 # Instagram mobile app clone
 
-| Homescreen | Homescreen on scroll |
-| -----------| -------------------- |
-|    ![Screenshot_20241214-180854](https://github.com/user-attachments/assets/da1fba59-fa63-4778-bb2d-e89e1877d162) |  ![Screenshot_20241214-180911](https://github.com/user-attachments/assets/fce4d39e-c354-4b5e-b46a-14fcb83cb585)|
+| Login screen  | Signup screen |
+| ------------- | ------------- |
+| ![login-screen](https://github.com/user-attachments/assets/e32d329f-026d-4b47-a479-3d924de5689e) | ![signup-screen](https://github.com/user-attachments/assets/7038f7e4-43c6-4a76-b928-fdaa9f66daa5) |
+| ----------    | -------------------- |
+| Home screen   | Homescreen on scroll |
+| ![homescreen](https://github.com/user-attachments/assets/39ed7157-d83a-4670-aefc-5c362523252a) | ![homescreen-on-scroll](https://github.com/user-attachments/assets/c4a40d06-2b24-4717-a395-20e15c1f1af0) |
+| Search screen | Search screen on scroll |
+| ![search-screen](https://github.com/user-attachments/assets/41ac95f3-1771-4428-9fff-3162d3e00a68) | ![search-screen-on-scroll](https://github.com/user-attachments/assets/8d9f9917-96bd-4f88-8d1d-04cbe0abbd04) |
 
 
 ## Overview
-This is a Instagram mobile app clone developed for both Android and iOS.
+This is a Instagram mobile app clone developed for both Android and iOS. The app is still unser development phase. More features coing soon.
 
 
 ## Developer instructions
