@@ -3,11 +3,18 @@
 | Login screen  | Signup screen |
 | ------------- | ------------- |
 | ![login-screen](https://github.com/user-attachments/assets/e32d329f-026d-4b47-a479-3d924de5689e) | ![signup-screen](https://github.com/user-attachments/assets/7038f7e4-43c6-4a76-b928-fdaa9f66daa5) |
-| ----------    | -------------------- |
+|    |  |
+|    |  |
 | Home screen   | Homescreen on scroll |
 | ![homescreen](https://github.com/user-attachments/assets/39ed7157-d83a-4670-aefc-5c362523252a) | ![homescreen-on-scroll](https://github.com/user-attachments/assets/c4a40d06-2b24-4717-a395-20e15c1f1af0) |
+|    |  |
+|    |  |
 | Search screen | Search screen on scroll |
 | ![search-screen](https://github.com/user-attachments/assets/41ac95f3-1771-4428-9fff-3162d3e00a68) | ![search-screen-on-scroll](https://github.com/user-attachments/assets/8d9f9917-96bd-4f88-8d1d-04cbe0abbd04) |
+|    |  |
+|    |  |
+| Profile screen | Profile screen on scroll |
+| ![profile-screen](https://github.com/user-attachments/assets/a2ef5a2b-8aea-4ad4-a7e7-b359a0c00b46) | ![profile-screen-on-scroll](https://github.com/user-attachments/assets/47410d7f-b0bd-46da-9d5b-c216af3b0c96) |
 
 
 ## Overview
