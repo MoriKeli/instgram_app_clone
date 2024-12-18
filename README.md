@@ -44,7 +44,7 @@ This is a Instagram mobile app clone developed for both Android and iOS.
 Clone this repository by opening your terminal/CMD and change the current working directory to Desktop - use `cd Desktop` command.
 ```bash
     $ cd Desktop
-    $ git clone https://github.com/morikeli/instgram-mobile-clone.git
+    $ git clone https://github.com/morikeli/instagram-mobile-app-clone.git
 ```
 
 2. Open the cloned repository on your text editor and run this command:
