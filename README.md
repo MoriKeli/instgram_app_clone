@@ -15,6 +15,18 @@
 |    |  |
 | Profile screen | Profile screen on scroll |
 | ![profile-screen](https://github.com/user-attachments/assets/a2ef5a2b-8aea-4ad4-a7e7-b359a0c00b46) | ![profile-screen-on-scroll](https://github.com/user-attachments/assets/47410d7f-b0bd-46da-9d5b-c216af3b0c96) |
+|    |   |
+|    |   |
+| Settings | Settings on scroll |
+| ![settings](https://github.com/user-attachments/assets/10c3fc78-2adf-455c-b905-5d0ca1ebbeda) | ![settings-on-scroll](https://github.com/user-attachments/assets/c1d9462b-ccdc-47f9-9b12-5d830f16f067) |
+|    |   |
+|    |   |
+| Chat screen | Chat screen on scroll |
+| ![chat-screen](https://github.com/user-attachments/assets/57c60b92-b796-4b45-8f8b-098d1de93d47) | ![chat-screen-on-scroll](https://github.com/user-attachments/assets/d23930d8-111f-410f-9e50-68164b6e01f1) |
+|    |   |
+|    |   |
+| Details screen | Details screen (toggle on) |
+| ![details-screen](https://github.com/user-attachments/assets/ce65b762-7f52-4a0c-85b5-bd09b8cbb77f) | ![details-screen-switch-on](https://github.com/user-attachments/assets/763f26f0-7217-432d-ba95-c43eb3f2d8c5) |
 
 
 ## Overview
