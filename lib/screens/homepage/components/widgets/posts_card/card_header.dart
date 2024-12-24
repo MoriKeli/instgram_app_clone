@@ -40,7 +40,7 @@ class PostCardHeader extends StatelessWidget {
       subtitle: Text(
         userFeed[currentPostIndex].username,
         style: TextStyle(
-          color: kSecondaryColor,
+          color: kTextSecondaryColor,
           fontSize: 13.0,
         ),
       ),
@@ -52,7 +52,7 @@ class PostCardHeader extends StatelessWidget {
             Text(
               userFeed[currentPostIndex].dateStamp,
               style: TextStyle(
-                color: kSecondaryColor,
+                color: kTextSecondaryColor,
                 fontSize: 13.0,
               ),
               textAlign: TextAlign.end,
