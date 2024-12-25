@@ -22,7 +22,7 @@ class CommentsWidget extends StatelessWidget {
           Text(
             'View all ${userFeed[currentPostIndex].totalComments} comments',
             style: TextStyle(
-              color: kSecondaryColor,
+              color: kTextSecondaryColor,
             ),
           ),
         ],
