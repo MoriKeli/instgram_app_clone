@@ -1,5 +1,8 @@
 # Instagram mobile app clone
 
+## Mobile app screenshots
+
+
 | Login screen  | Signup screen |
 | ------------- | ------------- |
 | ![login-screen](https://github.com/user-attachments/assets/e32d329f-026d-4b47-a479-3d924de5689e) | ![signup-screen](https://github.com/user-attachments/assets/7038f7e4-43c6-4a76-b928-fdaa9f66daa5) |
