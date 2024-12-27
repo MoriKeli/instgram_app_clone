@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/profile/components/user_album.dart';
 import 'package:instagram_clone/screens/profile/components/user_bio.dart';
 import 'package:instagram_clone/screens/profile/components/widgets/profile_screen_header.dart';
-
 
 class ProfileScreenBody extends StatelessWidget {
   const ProfileScreenBody({
@@ -14,6 +14,9 @@ class ProfileScreenBody extends StatelessWidget {
       children: [
         ProfileScreenHeader(),
         UserBio(),
+        SizedBox(height: 15.0),
+        UserAlbums(),  // album containing user's instagram stories
+        
       ],
     );
   }
