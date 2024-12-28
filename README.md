@@ -3,8 +3,12 @@
 ## Mobile app screenshots
 
 
+| Splash screen (light) | Splash screen (dark) |
+| --------------------- | -------------------- |
+| ![Screenshot_20241229-005001](https://github.com/user-attachments/assets/24ddfa35-53a7-488e-a1b6-10f526e3a9e7) | ![Screenshot_20241229-004825](https://github.com/user-attachments/assets/d78b3116-259f-4ac8-8097-55a90f807a41) |
+|    |  |
+|    |  |
 | Login screen  | Signup screen |
-| ------------- | ------------- |
 | ![login-screen](https://github.com/user-attachments/assets/e32d329f-026d-4b47-a479-3d924de5689e) | ![signup-screen](https://github.com/user-attachments/assets/7038f7e4-43c6-4a76-b928-fdaa9f66daa5) |
 |    |  |
 |    |  |
@@ -38,6 +42,10 @@
 |    |   |
 | Details screen | Details screen (toggle on) |
 | ![details-screen](https://github.com/user-attachments/assets/ce65b762-7f52-4a0c-85b5-bd09b8cbb77f) | ![details-screen-switch-on](https://github.com/user-attachments/assets/763f26f0-7217-432d-ba95-c43eb3f2d8c5) |
+| Reels screen | Reels screen on scroll |
+|    |   |
+|    |   |
+| ![Screenshot_20241229-005817](https://github.com/user-attachments/assets/e3036dd8-0e9b-442a-81aa-6e76dcfab17a) | ![Screenshot_20241229-005845](https://github.com/user-attachments/assets/951f9ba0-457f-4f38-b97d-8922ccdc33c7) |
 
 
 ## Overview
