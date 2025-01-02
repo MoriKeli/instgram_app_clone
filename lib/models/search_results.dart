@@ -11,7 +11,7 @@ List<SearchResults> searchResults = [
   SearchResults(imagePath: "images/posts/crusade.jpg"),
   SearchResults(imagePath: "images/posts/event.jpg"),
   SearchResults(imagePath: "images/posts/kelvin-anderson.jpg"),
-  SearchResults(imagePath: "images/posts/just-chilling.jpg", ),
+  SearchResults(imagePath: "images/posts/just-chilling.jpg"),
   SearchResults(imagePath: "images/posts/family-hangout.jpg"),
   SearchResults(imagePath: "images/posts/male-developer.jpg"),
   SearchResults(imagePath: "images/posts/img1.jpeg"),
