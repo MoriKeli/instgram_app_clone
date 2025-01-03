@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/models/albums.dart';
+import 'package:instagram_clone/models/user_profile/albums.dart';
 import 'package:instagram_clone/screens/profile/components/widgets/albums.dart';
 
 class UserAlbums extends StatelessWidget {
