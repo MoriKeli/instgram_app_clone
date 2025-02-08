@@ -18,7 +18,7 @@ class MessageIcon extends StatelessWidget {
             padding: EdgeInsets.zero,
             onPressed: () => Navigator.pushNamed(context, MessagesScreen.routeName),
             icon: ImageIcon(
-              AssetImage('images/icons/message-icon.png'),
+              AssetImage('assets/images/icons/message-icon.png'),
               size: 28.0,
             ),
           ),

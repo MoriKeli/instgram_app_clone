@@ -15,7 +15,7 @@ class SignupScreenBody extends StatelessWidget {
         child: ListView(
           children: [
             Image.asset(
-              'images/logo-black-bg.jpg',
+              'assets/images/logo-black-bg.jpg',
               height: MediaQuery.of(context).size.height * .12,
             ),
             SizedBox(height: 5.0),

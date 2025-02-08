@@ -14,7 +14,7 @@ class RecipientDetailsSectionWidget extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 40.0,
-            backgroundImage: AssetImage('images/dps/brenda-jones.jpg'),
+            backgroundImage: AssetImage('assets/images/dps/brenda-jones.jpg'),
           ),
           SizedBox(height: 8.0),
           Text(

@@ -23,7 +23,7 @@ class TrayIcon extends StatelessWidget {
           child: InkWell(
             onTap: () {},
             child: ImageIcon(
-              AssetImage('images/icons/comment-icon.png'),
+              AssetImage('assets/images/icons/comment-icon.png'),
               size: 28.0,
             ),
           ),
@@ -33,7 +33,7 @@ class TrayIcon extends StatelessWidget {
           child: InkWell(
             onTap: () {},
             child: ImageIcon(
-              AssetImage('images/icons/message-icon.png'),
+              AssetImage('assets/images/icons/message-icon.png'),
               size: 22.0,
             ),
           ),

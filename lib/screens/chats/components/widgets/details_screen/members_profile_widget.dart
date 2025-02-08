@@ -12,7 +12,7 @@ class MembersProfileWidget extends StatelessWidget {
     return ListTile(
       leading: CircleAvatar(
         radius: 24.0,
-        backgroundImage: AssetImage('images/dps/brenda-jones.jpg'),
+        backgroundImage: AssetImage('assets/images/dps/brenda-jones.jpg'),
       ),
       title: Text('iambrendajones', style: TextStyle(fontSize: 14.0)),
       subtitle: Text('iambrendajones', style: TextStyle(color: kTextSecondaryColor, fontSize: 13.0)),

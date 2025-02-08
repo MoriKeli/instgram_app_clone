@@ -11,7 +11,7 @@ class LoginScreenHeader extends StatelessWidget {
       alignment: Alignment.center,
       padding: const EdgeInsets.only(top: 80.0, bottom: 50.0),
       child: const Image(
-        image: AssetImage("images/logo-black-bg.jpg"),
+        image: AssetImage("assets/images/logo-black-bg.jpg"),
         height: 70.0,
       ),
     );

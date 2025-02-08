@@ -11,7 +11,7 @@ AppBar chatScreenAppBar(BuildContext context) {
       children: [
         CircleAvatar(
           radius: 16.0,
-          backgroundImage: AssetImage('images/dps/brenda-jones.jpg'),
+          backgroundImage: AssetImage('assets/images/dps/brenda-jones.jpg'),
         ),
         SizedBox(width: 12.0),
         SizedBox(

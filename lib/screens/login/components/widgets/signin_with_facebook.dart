@@ -14,7 +14,7 @@ class SignInWithFacebook extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image(
-            image: AssetImage("images/fb-icon.png"),
+            image: AssetImage("assets/images/fb-icon.png"),
             height: 20.0,
           ),
           Text(" Continue with "),

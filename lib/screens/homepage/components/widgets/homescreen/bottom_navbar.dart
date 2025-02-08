@@ -34,8 +34,8 @@ class BottomNavBar extends StatelessWidget {
           label: '',
         ),
         BottomNavigationBarItem(
-          activeIcon: ImageIcon(AssetImage('images/icons/reels-filled-icon.png')),
-          icon: ImageIcon(AssetImage('images/icons/reels-icon.png')),
+          activeIcon: ImageIcon(AssetImage('assets/images/icons/reels-filled-icon.png')),
+          icon: ImageIcon(AssetImage('assets/images/icons/reels-icon.png')),
           label: '',
         ),
         BottomNavigationBarItem(

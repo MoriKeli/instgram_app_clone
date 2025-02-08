@@ -7,7 +7,7 @@ AppBar appBar() {
   return AppBar(
     automaticallyImplyLeading: false,
     title: const Image(
-      image: AssetImage("images/logo-black-bg.jpg"),
+      image: AssetImage("assets/images/logo-black-bg.jpg"),
       height: 50.0,
     ),
     backgroundColor: kBackgroundColor,

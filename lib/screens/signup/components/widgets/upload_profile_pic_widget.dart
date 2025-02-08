@@ -13,7 +13,7 @@ class UploadProfilePictureWidget extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         CircleAvatar(
-          backgroundImage: AssetImage('images/default.png'),
+          backgroundImage: AssetImage('assets/images/default.png'),
           radius: MediaQuery.of(context).size.height * .08,
         ),
         Positioned(
