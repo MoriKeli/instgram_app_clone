@@ -101,7 +101,7 @@ class FollowedUsersStoriesWidget extends StatelessWidget {
         )
       : CircleAvatar(
           radius: MediaQuery.of(context).size.width * .114,
-          backgroundImage: AssetImage('images/gradient.jpg'),
+          backgroundImage: AssetImage('assets/images/gradient.jpg'),
           child: CircleAvatar(
             radius: MediaQuery.of(context).size.width * .104,
             backgroundImage:
@@ -138,7 +138,7 @@ class MyStoriesWidget extends StatelessWidget {
             ),
             child: CircleAvatar(
               radius: MediaQuery.of(context).size.width * .114,
-              backgroundImage: AssetImage('images/gradient.jpg'),
+              backgroundImage: AssetImage('assets/images/gradient.jpg'),
               child: CircleAvatar(
                 radius: MediaQuery.of(context).size.width * .102,
                 backgroundImage: AssetImage(
@@ -148,7 +148,7 @@ class MyStoriesWidget extends StatelessWidget {
           )
           : CircleAvatar(
               radius: MediaQuery.of(context).size.width * .114,
-              backgroundImage: AssetImage('images/gradient.jpg'),
+              backgroundImage: AssetImage('assets/images/gradient.jpg'),
               child: CircleAvatar(
                 radius: MediaQuery.of(context).size.width * .102,
                 backgroundImage: AssetImage(
