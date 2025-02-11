@@ -7,6 +7,10 @@
 |    |  |
 | Home screen   | Homescreen on scroll |
 | ![homescreen](https://github.com/user-attachments/assets/39ed7157-d83a-4670-aefc-5c362523252a) | ![homescreen-on-scroll](https://github.com/user-attachments/assets/c4a40d06-2b24-4717-a395-20e15c1f1af0) |
+|    |   |
+|    |   |
+| Instagram stories | Instagram stories on scroll |
+| ![homepage-viewed-instagram-stories](https://github.com/user-attachments/assets/8db51c58-ff01-4945-8007-c652d79d8d0c) | ![homescreen-instagram-stories-on-scroll](https://github.com/user-attachments/assets/d7339fac-512b-4885-89ff-a436700b8e49) |
 |    |  |
 |    |  |
 | Search screen | Search screen on scroll |
@@ -19,6 +23,10 @@
 |    |   |
 | Settings | Settings on scroll |
 | ![settings](https://github.com/user-attachments/assets/10c3fc78-2adf-455c-b905-5d0ca1ebbeda) | ![settings-on-scroll](https://github.com/user-attachments/assets/c1d9462b-ccdc-47f9-9b12-5d830f16f067) |
+|    |   |
+|    |   |
+| Message screen | Message screen on scroll |
+| ![message_screen](https://github.com/user-attachments/assets/01b4a04f-f70a-4b1e-ba44-505a6d3fcb15) | ![message-screen-on-scroll](https://github.com/user-attachments/assets/e5372e3d-871a-4d6e-9ef6-df92c85dc0eb) |
 |    |   |
 |    |   |
 | Chat screen | Chat screen on scroll |
