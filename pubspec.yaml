@@ -44,6 +44,7 @@ dependencies:
   awesome_snackbar_content: ^0.1.4
   flutter_launcher_icons: ^0.14.2
   rename: ^3.0.2
+  video_player: ^2.9.2
 
 dev_dependencies:
   flutter_test:
