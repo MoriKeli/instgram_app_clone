@@ -11,7 +11,7 @@ class UserProfilePictureWidget extends StatelessWidget {
     return Stack(clipBehavior: Clip.none, children: [
       CircleAvatar(
         radius: MediaQuery.of(context).size.width * .12,
-        backgroundImage: AssetImage('images/dps/testuser.jpg'),
+        backgroundImage: AssetImage('assets/images/dps/testuser.jpg'),
       ),
       Positioned(
         top: MediaQuery.of(context).size.height * .1,

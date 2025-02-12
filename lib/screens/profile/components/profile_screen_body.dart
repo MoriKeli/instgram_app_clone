@@ -125,7 +125,7 @@ class ProfileScreenTabs extends StatelessWidget {
       indicatorSize: TabBarIndicatorSize.tab,
       tabs: [
         Tab(icon: Icon(Icons.grid_on)),
-        Tab(icon: ImageIcon(AssetImage('images/icons/reels-icon.png'))),
+        Tab(icon: ImageIcon(AssetImage('assets/images/icons/reels-icon.png'))),
         Tab(icon: Icon(Icons.person_pin_outlined)),
       ],
     );
