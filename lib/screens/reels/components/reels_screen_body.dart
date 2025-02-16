@@ -18,24 +18,6 @@ class _ReelsScreenBodyState extends State<ReelsScreenBody> {
   final PageController _pageController = PageController();
   late List<VideoPlayerController> _controllers;
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _videoPlayerController = VideoPlayerController.asset('assets/videos/github-unwrapped.mp4')
-  //     ..initialize().then((value) {
-  //       setState(() {
-  //         _videoPlayerController.setLooping(true); // reels video repeats after playing once
-  //         _videoPlayerController.setVolume(1.0); // set audio volume to full volume
-  //         // _videoPlayerController.play(); // auto-play reels video
-  //       });
-  //     });
-  // }
-
-  // @override
-  // void dispose() {
-  //   _videoPlayerController.dispose();
-  //   super.dispose();
-  // }
 
   @override
   void initState() {
@@ -49,10 +31,6 @@ class _ReelsScreenBodyState extends State<ReelsScreenBody> {
       });
     })).toList();
     
-    // for (var controller in _controllers) {
-    //   controller.setLooping(true);
-    //   controller.setVolume(1.0);
-    // }
 
     // Auto-play the first video
     if (_controllers.isNotEmpty) {
