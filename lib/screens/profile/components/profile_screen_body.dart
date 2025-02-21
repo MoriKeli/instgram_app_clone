@@ -10,7 +10,6 @@ import 'package:instagram_clone/screens/profile/components/widgets/tabs/all_post
 import 'package:instagram_clone/screens/profile/components/widgets/tabs/tagged_posts.dart';
 import 'package:instagram_clone/screens/profile/components/widgets/tabs/user_reels_widget.dart';
 
-
 class ProfileScreenBody extends StatefulWidget {
   const ProfileScreenBody({
     super.key,
@@ -20,7 +19,8 @@ class ProfileScreenBody extends StatefulWidget {
   State<ProfileScreenBody> createState() => _ProfileScreenBodyState();
 }
 
-class _ProfileScreenBodyState extends State<ProfileScreenBody> with SingleTickerProviderStateMixin {
+class _ProfileScreenBodyState extends State<ProfileScreenBody>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -46,13 +46,13 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> with SingleTicker
           UserAlbums(), // album containing user's instagram stories
           SizedBox(height: 16.0),
           ProfileScreenTabs(tabController: _tabController), // tabs
-          TabsContent(tabController: _tabController), // content for each tab - posts, reels & tagged
+          // content for each tab - posts, reels & tagged
+          TabsContent(tabController: _tabController),
         ],
       ),
     );
   }
 }
-
 
 class TabsContent extends StatelessWidget {
   const TabsContent({
@@ -66,31 +66,53 @@ class TabsContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height:
-      // if array is empty set the height to 200.0 otherwise calculate max height
-      myPosts.isEmpty
-        ? 200.0
-        : (myPosts.length * (MediaQuery.of(context).size.height * .18 + 4.0) / 3), // max height = (no. of images in the array * height of each image + margins) / 3 columns
+          // if myPost and myReels arrays are empty set the height to 200.0 otherwise calculate max height
+          myPosts.isEmpty && myReels.isEmpty
+              ? 200.0
+              : (myPosts.length *
+                  (MediaQuery.of(context).size.height * .18 + 4.0) /
+                  3), // max height = (no. of images in the array * height of each image + margins) / 3 columns
       child: TabBarView(
         controller: _tabController,
         children: [
-          // 1. My posts tab view
+          // 1. My posts tab
           myPosts.isEmpty
-            ? Center(child: Text('No post'))
-            : AllPostsWidget(), // if the user has not posted anything display 'No post' otherwise display their post(s)
-          
-          // 2. Reels tab view
-          myReels.isEmpty ? Center(child: Text('No reel')) : UserReelsWidget(),
-          
-          // 3. tagged posts tab view
+              ? Center(
+                  child: Text(
+                    'No post',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : AllPostsWidget(), // if the user has not posted anything display 'No post' otherwise display their post(s)
+
+          // 2. Reels tab
+          myReels.isEmpty
+              ? Center(
+                  child: Text(
+                    'No reel',
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : UserReelsWidget(),
+
+          // 3. tagged posts tab
           taggedPosts.isEmpty
-            ? Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 64.0, vertical: 40.0),
+              ? Center(
+                  child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 64.0, vertical: 40.0),
                   child: Column(
                     children: [
                       Text(
                         'Photos and videos of you',
-                        style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 18.0, fontWeight: FontWeight.bold),
                       ),
                       Text(
                         "When people tag you in photos and videos, they'll appear here.",
@@ -100,15 +122,13 @@ class TabsContent extends StatelessWidget {
                       ),
                     ],
                   ),
-                )
-              )
-            : TaggedPostsWidget(),
+                ))
+              : TaggedPostsWidget(),
         ],
       ),
     );
   }
 }
-
 
 class ProfileScreenTabs extends StatelessWidget {
   const ProfileScreenTabs({
