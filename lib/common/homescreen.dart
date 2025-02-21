@@ -3,6 +3,7 @@ import 'package:instagram_clone/screens/add_post/new_posts_screen.dart';
 import 'package:instagram_clone/screens/homepage/components/widgets/homescreen/bottom_navbar.dart';
 import 'package:instagram_clone/screens/homepage/homepage.dart';
 import 'package:instagram_clone/screens/profile/profile_screen.dart';
+import 'package:instagram_clone/screens/reels/reels_screen.dart';
 import 'package:instagram_clone/screens/search/search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const HomeScreenWidgets(),
     const SearchScreen(),
     const NewPostsScreen(),
-    const Center(child: Text('Screen will be updated soon.')),
+    const ReelsScreen(),
     const ProfileScreen(),
     
   ];
