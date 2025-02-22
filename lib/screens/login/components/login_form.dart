@@ -38,7 +38,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           SizedBox(height: 8.0),
           FormInputField(
-            textEditingController: _usernameController,
+            textEditingController: _passwordController,
             hintText: 'Password',
             labelText: 'Enter your password',
             isPasswordField: true,
